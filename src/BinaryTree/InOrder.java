@@ -29,6 +29,14 @@ public class InOrder {
 		}
 		return list;
 	}
+	List<TreeNode> list = new ArrayList<TreeNode>();
+	public void inOrderRec(TreeNode root){
+		if(root != null){
+			inOrderRec(root.left);
+			list.add(root);
+			inOrderRec(root.right);
+		}
+	}
 	public static void main(String[] args){
 		InOrder io = new InOrder();
 		/**
@@ -51,36 +59,14 @@ public class InOrder {
 		D.right = E;
 		G.right = I;
 		I.left = H;
-		List<Object> list = io.inOrder(F);
-		for(Object i : list){
-			System.out.println(i);
+		List<Object> list1 = io.inOrder(F);
+		for(Object i : list1){
+			System.out.print(i + " ");
 		}
-	}
-	private static void inorderTraversalwithoutrecursion(TreeNode root) {
-		Stack<TreeNode> s = new Stack<TreeNode>();
-		
-		if(root == null)
-			return;
-		
-		foo(root,s);
-		
-		while(!s.isEmpty()){
-			root = s.pop();
-			System.out.println(root.val);
-			if(root.right != null){
-				root = root.right;
-				foo(root,s);
-			}
+		System.out.println("");
+		io.inOrderRec(F);
+		for(TreeNode i : io.list){
+			System.out.print(i.val + " ");
 		}
-		
-	}
-
-
-	private static void foo(TreeNode root, Stack<TreeNode> s) {
-		while(root != null){
-			s.push(root);
-			root = root.left;
-		}
-		
 	}
 }
