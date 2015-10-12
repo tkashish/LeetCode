@@ -8,6 +8,9 @@ public class InOrder {
 
 	public List<Object> inOrder(TreeNode root){
 		List<Object> list = new ArrayList<Object>();
+		if(root == null){
+            return list;
+        }
 		Stack<TreeNode> s = new Stack<TreeNode>();
 		while(true){
 			if(root != null){
@@ -52,5 +55,32 @@ public class InOrder {
 		for(Object i : list){
 			System.out.println(i);
 		}
+	}
+	private static void inorderTraversalwithoutrecursion(TreeNode root) {
+		Stack<TreeNode> s = new Stack<TreeNode>();
+		
+		if(root == null)
+			return;
+		
+		foo(root,s);
+		
+		while(!s.isEmpty()){
+			root = s.pop();
+			System.out.println(root.val);
+			if(root.right != null){
+				root = root.right;
+				foo(root,s);
+			}
+		}
+		
+	}
+
+
+	private static void foo(TreeNode root, Stack<TreeNode> s) {
+		while(root != null){
+			s.push(root);
+			root = root.left;
+		}
+		
 	}
 }
