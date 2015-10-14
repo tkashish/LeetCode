@@ -45,5 +45,8 @@ public class MaxSumIs {
 		int[] in = {1,2,0,3,4,100,5, 200};
 		System.out.println(maxSumInSubsequence(in));
 		System.out.println(maxSubsequenceSize(in));
+		int[] in5 = {70, 55, 13, 2, 99, 2, 80, 80, 80, 80, 100, 19, 7, 5, 5, 5, 1000, 32, 32};
+		System.out.println(maxSumInSubsequence(in5));
+		System.out.println(maxSubsequenceSize(in5));
 	}
 }
