@@ -1,5 +1,5 @@
 package DynamicProgramming;
-
+// http://community.topcoder.com/stat?c=problem_statement&pm=2402&rd=5009
 public class BadNeighbors {
 
 	public static int badNeighbors(int[] in){
