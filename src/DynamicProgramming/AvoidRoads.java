@@ -1,7 +1,9 @@
 package DynamicProgramming;
 import java.util.Arrays;
 import java.util.List;
-
+/*
+ * http://community.topcoder.com/tc?module=ProblemDetail&rd=4709&pm=1889
+ */
 public class AvoidRoads {
 
 	public static long avoidRoads(int w, int h, String[] bad){
