@@ -1,5 +1,6 @@
+import java.util.Deque;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 import BinaryTree.TreeNode;
@@ -85,6 +86,9 @@ public class LRU {
             if(root == null){
                 return true;
             }else{
+            	Deque<TreeNode> dq = new LinkedList<TreeNode>();
+            	dq.removeLast()
+            	dq.removeFirst()
                 if((root.left != null && root.right == null) || (root.left = null && root.right != null)){
                     return false;
                 }else if(root.left == null && root.right == null){
