@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import java.util.Arrays;
+
 public class Construct_Binary_Tree_from_Inorder_and_Preorder_Traversal {
 	public TreeNode buildTree(int[] preorder, int[] inorder) {
         if(preorder.length == 0)return null;
