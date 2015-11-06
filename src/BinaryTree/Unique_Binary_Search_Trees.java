@@ -11,7 +11,6 @@ public class Unique_Binary_Search_Trees {
         map1.put(0,1);
         map.put(1,map1);
         for(int i = 2; i <= n; i++){
-        	System.out.println("====");
             HashMap<Integer, Integer> map2 = new HashMap<Integer, Integer>();
             HashMap<Integer, Integer> m = map.get(i-1);
             for(int j = 0; j < i; j++){
@@ -21,7 +20,6 @@ public class Unique_Binary_Search_Trees {
                         count += m.get(k);                     
                     }
                 }
-                System.out.println(j + " " + count);
                 map2.put(j, count);
             }
             map.put(i, map2);

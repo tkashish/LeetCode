@@ -1,5 +1,10 @@
 package BinaryTree;
 
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Binary_Tree_Zigzag_Level_Order_Traversal {
 	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
@@ -18,7 +23,7 @@ public class Binary_Tree_Zigzag_Level_Order_Traversal {
                     flag = false;                    
                 }else{
                     node = dq.removeLast();
-                    list.add(node.val);
+                    list.add((Integer) node.val);
                     if(node.left != null) dq.addFirst(node.left);
                     if(node.right != null) dq.addFirst(node.right);
                 }
@@ -30,7 +35,7 @@ public class Binary_Tree_Zigzag_Level_Order_Traversal {
                     flag = true;                    
                 }else{
                     node = dq.removeFirst();
-                    list.add(node.val);
+                    list.add((Integer) node.val);
                     if(node.right != null) dq.addLast(node.right);
                     if(node.left != null) dq.addLast(node.left);
                 }
@@ -39,4 +44,12 @@ public class Binary_Tree_Zigzag_Level_Order_Traversal {
         ret.add(list);
         return ret;
     }
+
+	public static void main(String[] args){
+		System.out.println(3&4);
+		for(int i = 1; i < 100; i++ ){
+			System.out.println(Integer.toBinaryString(i) + "   " + i);
+		}
+	
+	}
 }
