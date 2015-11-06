@@ -1,5 +1,8 @@
 package DynamicProgramming;
-
+/*
+ * The code below is giving correct answer but TLE for huge entries 
+ * runtime  O(n) best case and O(n2) worst case
+ */
 public class Best_Time_To_Buy_and_Sell_Stock_III {
 	int[] sol = null;
     int minX = 0;
