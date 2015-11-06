@@ -87,9 +87,9 @@ public class LRU {
                 return true;
             }else{
             	Deque<TreeNode> dq = new LinkedList<TreeNode>();
-            	dq.removeLast()
-            	dq.removeFirst()
-                if((root.left != null && root.right == null) || (root.left = null && root.right != null)){
+            	dq.removeLast();
+            	dq.removeFirst();
+                if((root.left != null && root.right == null) || (root.left == null && root.right != null)){
                     return false;
                 }else if(root.left == null && root.right == null){
                     return true;
