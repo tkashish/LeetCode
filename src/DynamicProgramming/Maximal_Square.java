@@ -46,10 +46,25 @@ public class Maximal_Square {
 			System.out.println();
 		}
 	}
+	public static int numDecodings(String s) {
+        int max = 2;
+        int prev = 1;
+        for(int i = 2; i < s.length(); i++){
+            int temp = 0;
+            int num = Integer.parseInt(s.substring(i-1,i+1));
+            if(num < 27 && num > 0){
+                temp = prev*1;
+            }
+            prev = max;
+            max += temp;
+        }
+        return max;
+    }
 	public static void main(String[] args){
-		char[][] input = {{'1','0','1','0','0'}, {'1','0','1','1','1'}, {'1','1','1','1','1'}, {'1','0','0','1','1'}};
-		print(input);
-//		System.out.println(maximalSquare(input));
-		System.out.println(maximalSq(input));
+//		char[][] input = {{'1','0','1','0','0'}, {'1','0','1','1','1'}, {'1','1','1','1','1'}, {'1','0','0','1','1'}};
+//		print(input);
+////		System.out.println(maximalSquare(input));
+//		System.out.println(maximalSq(input));
+		System.out.println(numDecodings("1222".contains({'0'})));
 	}	
 }

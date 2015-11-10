@@ -35,8 +35,5 @@ public class MaximumProductSubArray {
 	public static void main(String[] args){
 		int[] input = {2,3,-4,110};
 		System.out.println(maxProduct(input));
-		int i = 0;
-		char j = '1';
-		System.out.println((int) ((char) i - 110));
 	}
 }
