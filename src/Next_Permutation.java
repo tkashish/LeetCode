@@ -20,12 +20,9 @@ public class Next_Permutation {
 				return false;
 			}
 		}else{
-			System.out.println("s : " + start + " e : " + end);
 			boolean flag = helper(nums, start+1, end);
-			Utils.printArray(nums);
 			if(flag == false) return false;
 			int num = nums[start];
-//			Utils.printArray(nums);
 			int j = start;
 			for(int i = start+1; i <= end; i++){
 				if(nums[i] > nums[j]){
