@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -9,6 +10,7 @@ public class Valid_IP_Address {
 	public List<String> helper(String s, int num){
 //		System.out.println(s + " " + num);
 		List<String> ret = new ArrayList<String>();
+		Collections.sort(ret);
 		if(s.length() == 0) return ret;
 		else if(s.length() < num) return ret;
 		else if(num == 1 && s.length()>3) return ret;
