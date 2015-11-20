@@ -23,5 +23,6 @@ public class NumArray {
     	System.out.println(na.sumRange(0, 2));
     	System.out.println(na.sumRange(2, 5));
     	System.out.println(na.sumRange(0, 5));
+    	System.out.println(Math.sqrt(11108889));
     }
 }
