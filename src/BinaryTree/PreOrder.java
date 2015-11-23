@@ -52,7 +52,7 @@ public class PreOrder {
 		I.left = H;
 		List<Object> list = po.preOrder(F);
 		for(Object i : list){
-			System.out.println(i);
+			System.out.print(i+" ");
 		}
 	}
 }
